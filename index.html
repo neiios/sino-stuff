@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <title>Home Lighting Control</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Home Lighting Control</h1>
+    </header>
+    
+    <main>
+        <section class="room" data-room="Living Room">
+            <h2>Living Room</h2>
+            <div class="controls">
+                <div class="control-row">
+                    <label class="switch">
+                        <input type="checkbox" class="light-toggle" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="label-text">Lights On/Off</span>
+                </div>
+                
+                <div class="control-row">
+                    <span class="label-text">Brightness</span>
+                    <input type="range" min="0" max="100" value="75" class="brightness-slider">
+                    <span class="value display-brightness">75%</span>
+                </div>
+                
+                <div class="control-row">
+                    <span class="label-text">Color Temperature</span>
+                    <input type="range" min="2000" max="6500" value="3000" step="100" class="color-temp-slider">
+                    <span class="value display-color-temp">3000K</span>
+                </div>
+                
+                <button class="apply-btn">Apply</button>
+            </div>
+            <p class="current-state">Current State: On, 75%, 3000K</p>
+        </section>
+        
+        <section class="room" data-room="Kitchen">
+            <h2>Kitchen</h2>
+            <div class="controls">
+                <div class="control-row">
+                    <label class="switch">
+                        <input type="checkbox" class="light-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="label-text">Lights On/Off</span>
+                </div>
+                
+                <div class="control-row">
+                    <span class="label-text">Brightness</span>
+                    <input type="range" min="0" max="100" value="50" class="brightness-slider" disabled>
+                    <span class="value display-brightness">50%</span>
+                </div>
+                
+                <div class="control-row">
+                    <span class="label-text">Color Temperature</span>
+                    <input type="range" min="2000" max="6500" value="4000" step="100" class="color-temp-slider" disabled>
+                    <span class="value display-color-temp">4000K</span>
+                </div>
+                
+                <button class="apply-btn" disabled>Apply</button>
+            </div>
+            <p class="current-state">Current State: Off</p>
+        </section>
+        
+        <section class="room" data-room="Bedroom">
+            <h2>Bedroom</h2>
+            <div class="controls">
+                <div class="control-row">
+                    <label class="switch">
+                        <input type="checkbox" class="light-toggle" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="label-text">Lights On/Off</span>
+                </div>
+                
+                <div class="control-row">
+                    <span class="label-text">Brightness</span>
+                    <input type="range" min="0" max="100" value="30" class="brightness-slider">
+                    <span class="value display-brightness">30%</span>
+                </div>
+                
+                <div class="control-row">
+                    <span class="label-text">Color Temperature</span>
+                    <input type="range" min="2000" max="6500" value="2700" step="100" class="color-temp-slider">
+                    <span class="value display-color-temp">2700K</span>
+                </div>
+                
+                <button class="apply-btn">Apply</button>
+            </div>
+            <p class="current-state">Current State: On, 30%, 2700K</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Home Automation Inc.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
